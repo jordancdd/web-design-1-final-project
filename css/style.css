@@ -85,8 +85,29 @@ header a:focus {
     background-color: #FAFAFA;
 }
 
+section.services a:link {
+    display: inline-block;
+    padding: .30em .30em;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+
+.box {
+    width: 25%;
+    display: inline-block;
+    margin: 0 20px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 1.5em;
+}
+
 .work {
     background-color: white;
+    text-align: center;
 }
 
 .quote {
@@ -94,8 +115,21 @@ header a:focus {
     color: white;
 }
 
-.quote, h1 {
+.quote h1 {
     text-align: center;
+    color: white;
+}
+
+q {
+    display: flex;
+    color: white;
+    display: inline-block;
+    width: 50%;
+    margin: 0 20 px;
+    text-align: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .contact {
