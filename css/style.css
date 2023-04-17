@@ -19,9 +19,13 @@ header {
     padding: 1.5em, 1.5em, 1.5em, 1.5em;
     background-color: #0E1215;
     color: white;
-  }
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+  } 
 
-header img {
+.header-image {
+    width: 100%;
+    top: 10px;
     padding: 1.5em, 1.5em, 1.5em, 1.5 em;
     margin: 0 auto;
 }
@@ -35,8 +39,9 @@ header img {
 
 header nav ul li { 
     display: inline-flex;
+    float: right;
     list-style-type: none;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 header nav a {
@@ -44,9 +49,11 @@ header nav a {
     padding: .5em .75em;
 }
 
-header h1 + header nav a {
-    display: inline;
-  }
+.name {
+    float: left;
+    padding: none;
+    margin: none;
+}
 
 /*Apply default, visited, hover and focus states for links*/
 header a:link {
@@ -83,31 +90,61 @@ header a:focus {
 
 .services {
     background-color: #FAFAFA;
+    padding: 2em;
 }
 
-section.services a:link {
+.services h2 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "banner banner banner"
+    "col1   col2   col3";
+    gap: 1rem;
+    padding: 2rem;
+    align-self: end;
+}
+
+.services a:link {
     display: inline-block;
     padding: .30em .30em;
     border-radius: 4px;
     background-color: black;
     color: white;
     text-decoration: none;
+
 }
 
-.box {
-    width: 25%;
-    display: inline-block;
-    margin: 0 20px;
+article {
+    padding: 2rem;
     background-color: white;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    padding: 1.5em;
-}
+  }
 
-.work {
+.grid p {
+    margin-top: 0.5rem;
+  }
+
+.text {
+    width: 650px;
+    height:auto;
     background-color: white;
     text-align: center;
+    margin: 0 auto;
+}
+
+/*My Work images*/
+.photos {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: .30em .30em;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .quote {
@@ -115,29 +152,35 @@ section.services a:link {
     color: white;
 }
 
-.quote h1 {
+.quote h2 {
     text-align: center;
     color: white;
 }
 
-q {
+.quotes {
     display: flex;
-    color: white;
-    display: inline-block;
-    width: 50%;
-    margin: 0 20 px;
-    text-align: center;
     justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.q {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.q cite {
+    color:rgb(120, 120, 120);
 }
 
 .contact {
     background-color: white;
+    text-align: center;
 
 }
 
-section.contact figure {
+.contact figure {
     width: 3%;
     display: flex;
     display: inline-block;
@@ -145,6 +188,7 @@ section.contact figure {
     margin: 0em;
     align-items: center;
     flex-direction: row;
+    text-align: center;
 }
 
 footer {
